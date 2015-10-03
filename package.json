@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,12 @@
   "engines": {
     "node": "v4.1.1",
     "npm": "2.14.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "nock": "^2.13.0",
+    "proxyquire": "^1.7.2",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0"
   }
 }
