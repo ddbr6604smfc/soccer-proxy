@@ -1,7 +1,7 @@
 {
   "name": "soccer-proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "proxy for football-data.org",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
