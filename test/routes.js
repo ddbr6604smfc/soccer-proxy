@@ -3,27 +3,23 @@ var proxyquire = require('proxyquire');
 var seasonsFixture = require('./fixtures/seasons.json');
 
 var badApp = proxyquire('../lib/app', {
-  './getAllSeasons': () => {
-    return Promise.reject('some error');
-  },
+  './request': () => Promise.reject('some error'),
 });
 
 var goodApp = proxyquire('../lib/app', {
-  './getAllSeasons': () => {
-    return Promise.resolve(seasonsFixture);
-  },
+  './request': () => Promise.resolve(seasonsFixture),
 });
 
-describe('GET /seasons', () => {
-  it('should retrieve all seasons', (done) => {
+describe('GET *', () => {
+  it('should forward requests to the api', (done) => {
     request(goodApp)
-      .get('/seasons')
+      .get('/soccerseasons/12/fixtures')
       .expect(seasonsFixture, done);
   });
 
-  it('should return 500 if fetching seasons fails', (done) => {
+  it('should return 500 if forwarding fails', (done) => {
     request(badApp)
-      .get('/seasons')
+      .get('/teams/389/fixtures')
       .expect(500, done);
   });
 });
