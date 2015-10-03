@@ -1,0 +1,27 @@
+{
+  "name": "soccer-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddbr6604smfc/soccer-proxy.git"
+  },
+  "author": "ddbr6604smfc <ddbr6604smfc@gmail.com> (https://ddbr6604smfc@github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddbr6604smfc/soccer-proxy/issues"
+  },
+  "homepage": "https://github.com/ddbr6604smfc/soccer-proxy#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "isomorphic-fetch": "^2.1.1"
+  },
+  "engines": {
+    "node": "v4.1.1",
+    "npm": "2.14.4"
+  }
+}
